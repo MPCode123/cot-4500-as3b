@@ -8,6 +8,12 @@ def GaussAndBack(A,b):
             for i in range(n):
                 # Partial Pivoting: Swap rows if needed
                 max_row = i
+                max_val = abs(aug_matrix[i][i])
+                
+                for k in range(i + 1, n):
+                    if abs(aug_matrix[k][i] > max_val):
+                        mas_val = abs(aug_matrix[k][i])
+                        max_row = k
             
                 # Make the pivot 1 (row normalization)
                 pivot = aug_matrix[i, i]
@@ -17,18 +23,17 @@ def GaussAndBack(A,b):
             
             # Make zeros below pivot
                 for j in range(i + 1, n):
-                    factor = aug_matrix[j, i] / aug_matrix[i, i]
+                    factor = aug_matrix[j][i]
                     aug_matrix[j] = aug_matrix[j] - (factor * aug_matrix[i])
 
             # Back Substitution
             x = np.zeros(n)
                                         
-            for i in range(n-2, -1, -1):
-                x[i] = aug_matrix[i,n]
+            for i in range(n-1, -1, -1):
+                x[i] = aug_matrix[i][-1]
         
                 for j in range(i+1, n):
                     x[i] = x[i] - aug_matrix[i][j] * x[j]
-                x[i] = x[i] / aug_matrix[i,i]
 
             print(x) # Solution
             
