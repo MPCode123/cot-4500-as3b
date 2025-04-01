@@ -1,6 +1,6 @@
 # cot-4500-as3b
 
-The following repository will consist of methods that deal with matrix including Gaussian Elimination w/ Backward Selection and LU Factorization
+The following repository will consist of methods that deal with matrices including Gaussian Elimination w/ Backward Selection and LU Factorization
 
 In addition, we are looking for whether or not the matrix is diagonally dominant and/or positive definite
 
