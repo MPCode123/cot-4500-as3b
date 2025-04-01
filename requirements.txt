@@ -1,1 +1,7 @@
+import sys
+import os
 
+# For using functions from assignment_3 to test in test_assignment_3
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from src.main.assignment_3 import *

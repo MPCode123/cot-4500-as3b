@@ -1,14 +1,14 @@
 import sys
 import os
 
-# For using functions from assignment_1 to test in test_assignment_1
+# For using functions from assignment_3 to test in test_assignment_3
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 from src.main.assignment_3 import *
 
 print("Question 1: Gaussian Elimination and Backward substitution")
 
 A = np.array([[2,-1,1],[1,3,1],[-1,5,4]])
-b = np.array([6,0,-3]).reshape(-1,1)
+b = np.array([6,0,-3])
 
 GaussAndBack(A,b)
 print("\n")
